@@ -12,7 +12,6 @@
 		12DC2CE2706781BAB3F20CAC3B991E44 /* FHSTwitterEngine.h in Headers */ = {isa = PBXBuildFile; fileRef = 79324766FA7DEA21C748918C86C605C0 /* FHSTwitterEngine.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		14ADE197641C55D2F3088174DA1EBFAA /* CheckConnectivity.h in Headers */ = {isa = PBXBuildFile; fileRef = 2357AE0372613F4A4F8BC51C5919EBC4 /* CheckConnectivity.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		183EB0545EB5417D63909A8A9D3DCAA8 /* Pods-SocialMediaData_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 12100070CFAB688FC614977F846920B5 /* Pods-SocialMediaData_Tests-dummy.m */; };
-		29ADA98588DCB0976AC44CDFE3C44608 /* contents in Sources */ = {isa = PBXBuildFile; fileRef = E18F666711C6EB518DFAA90B3D3BEBC1 /* contents */; };
 		2A9E948D4963922F972868B2F3D3B736 /* SocialOperationHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCE2C73E7DEEB60C7F40F54D2734CCAF /* SocialOperationHandler.swift */; };
 		2D2213B5484DFB74DB7A2C2FB4423FB4 /* FHSTwitterEngine.m in Sources */ = {isa = PBXBuildFile; fileRef = 35D63283A6D2DD1C97D0D7F795E4CCAA /* FHSTwitterEngine.m */; };
 		31EC77F031BAC00816139D7F77C4BB52 /* CoreDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 191BEE1171C3D44200D5D4838B75B711 /* CoreDataManager.m */; };
@@ -27,6 +26,10 @@
 		BDE67E9E811FDEEDFF893307B4BF5FED /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73E5518E448D4CC61948D1DA3BA920EA /* Constants.swift */; };
 		C2B5353CF565A87AE9D29D2850AE059E /* Pods-SocialMediaData_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 175869C6DC4645CA9B9B6ABEB4CCBA08 /* Pods-SocialMediaData_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		CB97C20BA523754EFFA11756912AB0BB /* CoreDataManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 72258670AADEBC2EBF09E8152ABD2D66 /* CoreDataManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CC58F2B91E7C20C70058F5D7 /* SocialMedia.xcdatamodel in Sources */ = {isa = PBXBuildFile; fileRef = CC58F2B81E7C20C70058F5D7 /* SocialMedia.xcdatamodel */; };
+		CC58F2BA1E7C20CA0058F5D7 /* SocialMedia.xcdatamodel in Resources */ = {isa = PBXBuildFile; fileRef = CC58F2B81E7C20C70058F5D7 /* SocialMedia.xcdatamodel */; };
+		CC58F2BB1E7C20CF0058F5D7 /* SocialMedia.xcdatamodel in Headers */ = {isa = PBXBuildFile; fileRef = CC58F2B81E7C20C70058F5D7 /* SocialMedia.xcdatamodel */; settings = {ATTRIBUTES = (Public, ); }; };
+		CC58F2BC1E7C20DC0058F5D7 /* SocialMedia.xcdatamodel in Sources */ = {isa = PBXBuildFile; fileRef = CC58F2B81E7C20C70058F5D7 /* SocialMedia.xcdatamodel */; };
 		D9116AE938C867FBF29321D9898C498C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */; };
 		E372F0245844DE887BA8F88D029301DB /* TwitterJSONParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4569743C5D27152A554CA48F3C302CC6 /* TwitterJSONParser.swift */; };
 /* End PBXBuildFile section */
@@ -43,7 +46,7 @@
 
 /* Begin PBXFileReference section */
 		018437754F4BD5F8B2F3BBE8FA45E284 /* FHSStream.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = FHSStream.h; sourceTree = "<group>"; };
-		074E8CAEFD68D0F35F1C005183260318 /* SocialMediaData.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = SocialMediaData.modulemap; sourceTree = "<group>"; };
+		074E8CAEFD68D0F35F1C005183260318 /* SocialMediaData.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = SocialMediaData.modulemap; sourceTree = "<group>"; };
 		0E2FB228336B949D7B4A23D4434F841D /* SocialMediaData-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SocialMediaData-dummy.m"; sourceTree = "<group>"; };
 		12100070CFAB688FC614977F846920B5 /* Pods-SocialMediaData_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-SocialMediaData_Tests-dummy.m"; sourceTree = "<group>"; };
 		156043F2EB7CFC9B8FB6A711059051EB /* TwitterDataInfo.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TwitterDataInfo.swift; sourceTree = "<group>"; };
@@ -53,7 +56,7 @@
 		2357AE0372613F4A4F8BC51C5919EBC4 /* CheckConnectivity.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = CheckConnectivity.h; sourceTree = "<group>"; };
 		35D63283A6D2DD1C97D0D7F795E4CCAA /* FHSTwitterEngine.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = FHSTwitterEngine.m; sourceTree = "<group>"; };
 		4569743C5D27152A554CA48F3C302CC6 /* TwitterJSONParser.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TwitterJSONParser.swift; sourceTree = "<group>"; };
-		53FBC3D83F893B825199FC7CFDF9CD69 /* Pods_SocialMediaData_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_SocialMediaData_Tests.framework; path = "Pods-SocialMediaData_Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		53FBC3D83F893B825199FC7CFDF9CD69 /* Pods_SocialMediaData_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SocialMediaData_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5AE93787659336263F7416FD39198E5D /* TwitterPublicFeedsHandler.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TwitterPublicFeedsHandler.swift; sourceTree = "<group>"; };
 		72258670AADEBC2EBF09E8152ABD2D66 /* CoreDataManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = CoreDataManager.h; sourceTree = "<group>"; };
 		73E5518E448D4CC61948D1DA3BA920EA /* Constants.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
@@ -64,16 +67,16 @@
 		86C2E4CBD5DBF9834A425E3E6F6A9318 /* Pods-SocialMediaData_Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-SocialMediaData_Tests-frameworks.sh"; sourceTree = "<group>"; };
 		8D7B092449DF19ACFEAA4E87FA18AA50 /* SocialMediaData-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SocialMediaData-prefix.pch"; sourceTree = "<group>"; };
 		8FCE58905E39E0F74267A9D02F89E409 /* TweetInfo.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TweetInfo.swift; sourceTree = "<group>"; };
-		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		9EE758E3C909077F784A153B3B531D4C /* Pods-SocialMediaData_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-SocialMediaData_Tests.modulemap"; sourceTree = "<group>"; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9EE758E3C909077F784A153B3B531D4C /* Pods-SocialMediaData_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-SocialMediaData_Tests.modulemap"; sourceTree = "<group>"; };
 		9F1AF475F26F98D8BFEAEEFC9C97009A /* SocialMediaData-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SocialMediaData-umbrella.h"; sourceTree = "<group>"; };
 		A00CDF92E9CAAE7CCB477E5D4D6FE015 /* Pods-SocialMediaData_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SocialMediaData_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		A5338A8F72933C708E06B5DFF930B57B /* FHSStream.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = FHSStream.m; sourceTree = "<group>"; };
 		CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		CC58F2B81E7C20C70058F5D7 /* SocialMedia.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = SocialMedia.xcdatamodel; sourceTree = "<group>"; };
 		CCE2C73E7DEEB60C7F40F54D2734CCAF /* SocialOperationHandler.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SocialOperationHandler.swift; sourceTree = "<group>"; };
-		CD66B5D0713696D6222DFC20BF000CBC /* SocialMediaData.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SocialMediaData.framework; path = SocialMediaData.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CD66B5D0713696D6222DFC20BF000CBC /* SocialMediaData.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SocialMediaData.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D6A8523A85F09A42DAFD96756D08204C /* Pods-SocialMediaData_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SocialMediaData_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
-		E18F666711C6EB518DFAA90B3D3BEBC1 /* contents */ = {isa = PBXFileReference; includeInIndex = 1; path = contents; sourceTree = "<group>"; };
 		E44533F2774C4BB00EDE5A98DCF8E82F /* Pods-SocialMediaData_Tests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-SocialMediaData_Tests-resources.sh"; sourceTree = "<group>"; };
 		EAFFAD49DA9E8908BF2460A9894243D3 /* Pods-SocialMediaData_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SocialMediaData_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		F9E99D34DB39BD2A5DB52A8B3BB26254 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -123,7 +126,6 @@
 			children = (
 				A3770428C1847FCC767CF19D18903C39 /* Classes */,
 			);
-			name = SocialMediaData;
 			path = SocialMediaData;
 			sourceTree = "<group>";
 		};
@@ -136,7 +138,6 @@
 				4569743C5D27152A554CA48F3C302CC6 /* TwitterJSONParser.swift */,
 				5AE93787659336263F7416FD39198E5D /* TwitterPublicFeedsHandler.swift */,
 			);
-			name = Twitter;
 			path = Twitter;
 			sourceTree = "<group>";
 		};
@@ -162,13 +163,12 @@
 		A3770428C1847FCC767CF19D18903C39 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				CC58F2B81E7C20C70058F5D7 /* SocialMedia.xcdatamodel */,
 				73E5518E448D4CC61948D1DA3BA920EA /* Constants.swift */,
 				CCE2C73E7DEEB60C7F40F54D2734CCAF /* SocialOperationHandler.swift */,
 				EFC72160B5CAC4A84B8BFAEB43075A0E /* ObjectiveC */,
-				C28636ED1BECC4480798083E0BA8B017 /* SocialMedia.xcdatamodel */,
 				588581C480FFA85F4E04504312E03029 /* Twitter */,
 			);
-			name = Classes;
 			path = Classes;
 			sourceTree = "<group>";
 		};
@@ -178,15 +178,6 @@
 				7531C8F8DE19F1AA3C8A7AC97A91DC29 /* iOS */,
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		C28636ED1BECC4480798083E0BA8B017 /* SocialMedia.xcdatamodel */ = {
-			isa = PBXGroup;
-			children = (
-				E18F666711C6EB518DFAA90B3D3BEBC1 /* contents */,
-			);
-			name = SocialMedia.xcdatamodel;
-			path = SocialMedia.xcdatamodel;
 			sourceTree = "<group>";
 		};
 		DEFF227EB5B3ADB94E81961889618811 /* Targets Support Files */ = {
@@ -214,7 +205,6 @@
 				191BEE1171C3D44200D5D4838B75B711 /* CoreDataManager.m */,
 				F8A46905EF19239E8D7ABE50FEE31B67 /* FHSTwitterEngine */,
 			);
-			name = ObjectiveC;
 			path = ObjectiveC;
 			sourceTree = "<group>";
 		};
@@ -250,7 +240,6 @@
 				79324766FA7DEA21C748918C86C605C0 /* FHSTwitterEngine.h */,
 				35D63283A6D2DD1C97D0D7F795E4CCAA /* FHSTwitterEngine.m */,
 			);
-			name = FHSTwitterEngine;
 			path = FHSTwitterEngine;
 			sourceTree = "<group>";
 		};
@@ -282,6 +271,7 @@
 				CB97C20BA523754EFFA11756912AB0BB /* CoreDataManager.h in Headers */,
 				7F06A9FAFA349536347D383A55F6C76A /* FHSStream.h in Headers */,
 				12DC2CE2706781BAB3F20CAC3B991E44 /* FHSTwitterEngine.h in Headers */,
+				CC58F2BB1E7C20CF0058F5D7 /* SocialMedia.xcdatamodel in Headers */,
 				461E294E5DB89C81F9BA20D491E893CD /* SocialMediaData-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -296,6 +286,7 @@
 				3AB309296EFE1F5135C92604EFA47980 /* Sources */,
 				8D628E5089F8278B39C409ADD3763D12 /* Frameworks */,
 				868E50741F06AF539F980F9781771431 /* Headers */,
+				CC58F2B71E7C20B20058F5D7 /* Resources */,
 			);
 			buildRules = (
 			);
@@ -351,14 +342,25 @@
 		};
 /* End PBXProject section */
 
+/* Begin PBXResourcesBuildPhase section */
+		CC58F2B71E7C20B20058F5D7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CC58F2BA1E7C20CA0058F5D7 /* SocialMedia.xcdatamodel in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		3AB309296EFE1F5135C92604EFA47980 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CC58F2BC1E7C20DC0058F5D7 /* SocialMedia.xcdatamodel in Sources */,
 				8E85F6FE6EFC9B2458B36F7DE4C65B78 /* CheckConnectivity.m in Sources */,
 				BDE67E9E811FDEEDFF893307B4BF5FED /* Constants.swift in Sources */,
-				29ADA98588DCB0976AC44CDFE3C44608 /* contents in Sources */,
 				31EC77F031BAC00816139D7F77C4BB52 /* CoreDataManager.m in Sources */,
 				78C921884676A59E08A27D8C9EBC19E5 /* FHSStream.m in Sources */,
 				2D2213B5484DFB74DB7A2C2FB4423FB4 /* FHSTwitterEngine.m in Sources */,
@@ -376,6 +378,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CC58F2B91E7C20C70058F5D7 /* SocialMedia.xcdatamodel in Sources */,
 				183EB0545EB5417D63909A8A9D3DCAA8 /* Pods-SocialMediaData_Tests-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

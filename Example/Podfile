@@ -1,0 +1,6 @@
+use_frameworks!
+target 'SocialMediaData_Tests' do
+  pod 'SocialMediaData', :path => '../'
+  
+  
+end

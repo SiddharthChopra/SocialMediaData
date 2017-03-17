@@ -8,8 +8,8 @@
 
 Pod::Spec.new do |s|
   s.name             = 'SocialMediaData'
-  s.version          = '0.1.0'
-  s.summary          = 'A short description of SocialMediaData.'
+  s.version          = '0.1.1'
+s.summary          = 'SocialMediaData helps to retrieve twitter data from our server or twitter server'
 
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
@@ -18,7 +18,7 @@ Pod::Spec.new do |s|
 #   * Finally, don't worry about the indent, CocoaPods strips it!
 
   s.description      = <<-DESC
-TODO: Add long description of the pod here.
+SocialMediaData helps to retrieve twitter data from our server or twitter server with twitter info custom class object.
                        DESC
 
   s.homepage         = 'https://github.com/siddharthchopra/SocialMediaData'
@@ -33,8 +33,8 @@ TODO: Add long description of the pod here.
   s.source_files = 'SocialMediaData/Classes/**/*'
   
   # s.resource_bundles = {
-  #   'SocialMediaData' => ['SocialMediaData/Assets/*.png']
-  # }
+    # 'SocialMediaData' => ['SocialMediaData/Classes/*.xcdatamodel']
+   # }
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
   # s.frameworks = 'UIKit', 'MapKit'

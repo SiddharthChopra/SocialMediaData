@@ -1,0 +1,6 @@
+framework module SocialMediaData {
+  umbrella header "SocialMediaData-umbrella.h"
+
+  export *
+  module * { export * }
+}

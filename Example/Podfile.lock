@@ -1,0 +1,16 @@
+PODS:
+  - SocialMediaData (0.1.0)
+
+DEPENDENCIES:
+  - SocialMediaData (from `../`)
+
+EXTERNAL SOURCES:
+  SocialMediaData:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  SocialMediaData: 5dce4d3ef1122227ff52de24010c09530cb3e5f6
+
+PODFILE CHECKSUM: facdda17cf5e094ef76ca6b90d2d52e2f8497f78
+
+COCOAPODS: 1.2.0

@@ -1,5 +1,5 @@
 PODS:
-  - SocialMediaData (0.1.0)
+  - SocialMediaData (0.1.4)
 
 DEPENDENCIES:
   - SocialMediaData (from `../`)
@@ -9,7 +9,7 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  SocialMediaData: 5dce4d3ef1122227ff52de24010c09530cb3e5f6
+  SocialMediaData: 749600f6c3a4e374abb54bb46e465c12caef0fae
 
 PODFILE CHECKSUM: facdda17cf5e094ef76ca6b90d2d52e2f8497f78
 

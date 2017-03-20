@@ -1,6 +1,6 @@
 {
   "name": "SocialMediaData",
-  "version": "0.1.0",
+  "version": "0.1.4",
   "summary": "SocialMediaData helps to retrieve twitter data from our server or twitter server",
   "description": "SocialMediaData helps to retrieve twitter data from our server or twitter server with twitter info custom class object.",
   "homepage": "https://github.com/siddharthchopra/SocialMediaData",
@@ -13,7 +13,7 @@
   },
   "source": {
     "git": "https://github.com/siddharthchopra/SocialMediaData.git",
-    "tag": "0.1.0"
+    "tag": "0.1.4"
   },
   "platforms": {
     "ios": "8.0"

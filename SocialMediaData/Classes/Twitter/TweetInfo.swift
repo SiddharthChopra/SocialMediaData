@@ -6,12 +6,17 @@
 //  Copyright © 2016 Kahuna Systems. All rights reserved.
 //
 
-import Foundation
 import CoreData
+import Foundation
+@objc(TweetInfo)
 
-
-class TweetInfo: NSManagedObject {
-
-// Insert code here to add functionality to your managed object subclass
-
+public class TweetInfo: NSManagedObject {
+    
+    @NSManaged var profileIcon: String?
+    @NSManaged var tweetDate: String?
+    @NSManaged var tweeterUserId: String?
+    @NSManaged var tweeterUserName: String?
+    @NSManaged var tweetId: String?
+    @NSManaged var tweetText: String?
+    
 }

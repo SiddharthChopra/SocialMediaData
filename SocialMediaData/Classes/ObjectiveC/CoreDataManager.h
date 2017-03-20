@@ -11,7 +11,7 @@
 
 @interface CoreDataManager : NSObject
 
-@property (nonatomic, strong, readonly) NSManagedObjectContext *managedObjectContext;
+//@property (nonatomic, strong, readonly) NSManagedObjectContext *managedObjectContext;
 @property (nonatomic, strong) NSManagedObjectContext *customManagedObjectContext;
 @property (nonatomic, strong, readonly) NSManagedObjectModel *managedObjectModel;
 @property (nonatomic, strong, readonly) NSPersistentStoreCoordinator *persistentStoreCoordinator;
@@ -52,7 +52,7 @@
 
 -(void)setDatabaseName:(NSString *)string;
 
--(void)setCustomManagedObjectContext:(NSManagedObjectContext *)managedObjectContext;
+-(void)setManagedObjectContextFromApp:(NSManagedObjectContext *)managedObjectContext;
 
 -(NSMutableArray *) fetchAllEventDataFromDB:(NSString *) entityName;
 -(NSMutableArray*) fetchAllEventDataFromDB:(NSString *) entityName withPredicate:(NSPredicate *)predicate;

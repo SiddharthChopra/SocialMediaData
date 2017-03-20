@@ -99,7 +99,7 @@ class TwitterJSONParser: NSObject {
                 }
                 if coreDataObj != nil {
                     isDeleteChanges = true
-                    coreDataManager.managedObjectContext!.delete(coreDataObj!)
+                    coreDataManager.customManagedObjectContext!.delete(coreDataObj!)
                 }
             }
         }

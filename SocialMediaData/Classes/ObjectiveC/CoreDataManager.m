@@ -15,7 +15,7 @@
 @implementation CoreDataManager
 
 @synthesize managedObjectModel = _managedObjectModel;
-@synthesize managedObjectContext = _managedObjectContext;
+//@synthesize managedObjectContext = _managedObjectContext;
 @synthesize customManagedObjectContext = _customManagedObjectContext;
 @synthesize persistentStoreCoordinator = _persistentStoreCoordinator;
 
@@ -36,7 +36,7 @@
     self.dbName = string;
 }
 
--(void)setCustomManagedObjectContext:(NSManagedObjectContext *)managedObjectContext {
+-(void)setManagedObjectContextFromApp:(NSManagedObjectContext *)managedObjectContext {
     self.customManagedObjectContext = managedObjectContext;
 }
 
@@ -54,7 +54,7 @@
 
 - (id) createEntinty:(NSString*)entityName
 {
-    NSManagedObjectContext *context = self.managedObjectContext;
+    NSManagedObjectContext *context = self.customManagedObjectContext;
     id newObject = [NSEntityDescription insertNewObjectForEntityForName:entityName inManagedObjectContext:context];
     //[self saveContext];
     return newObject;
@@ -62,7 +62,7 @@
 
 - (NSMutableArray*)managedobjects:(NSString *)entityName{
     
-    NSManagedObjectContext *context = self.managedObjectContext;
+    NSManagedObjectContext *context = self.customManagedObjectContext;
     
     NSEntityDescription *entity = [NSEntityDescription entityForName:entityName inManagedObjectContext:context];
     
@@ -70,19 +70,19 @@
     [req setEntity:entity];
     
     NSError *error;
-    NSMutableArray *mutableFetchResults = [[self.managedObjectContext executeFetchRequest:req error:&error] mutableCopy];
+    NSMutableArray *mutableFetchResults = [[self.customManagedObjectContext executeFetchRequest:req error:&error] mutableCopy];
     return mutableFetchResults;
 }
 
 - (NSMutableArray*)objects:(NSString *)entityName
 {
-    NSManagedObjectContext *context = self.managedObjectContext;
+    NSManagedObjectContext *context = self.customManagedObjectContext;
     NSEntityDescription *entity = [NSEntityDescription entityForName:entityName inManagedObjectContext:context];
     NSMutableArray *dataArray;// =[[NSMutableArray alloc]init];
     NSFetchRequest *req = [[NSFetchRequest alloc] init];
     [req setEntity:entity];
     NSError *error;
-    NSMutableArray *mutableFetchResults = [[self.managedObjectContext executeFetchRequest:req error:&error] mutableCopy];
+    NSMutableArray *mutableFetchResults = [[self.customManagedObjectContext executeFetchRequest:req error:&error] mutableCopy];
     if (!mutableFetchResults) {
         //****NSLog(@"%@",error);
         return mutableFetchResults;
@@ -96,13 +96,13 @@
 
 - (NSArray *)objects:(NSString *)entityName withPredicate:(NSPredicate *)predicate
 {
-    NSManagedObjectContext *context = self.managedObjectContext;
+    NSManagedObjectContext *context = self.customManagedObjectContext;
     NSEntityDescription *entity = [NSEntityDescription entityForName:entityName inManagedObjectContext:context];
     NSFetchRequest *req = [[NSFetchRequest alloc] init];
     [req setEntity:entity];
     [req setPredicate:predicate];
     NSError *error;
-    NSArray *mutableFetchResults = [[self.managedObjectContext executeFetchRequest:req error:&error] mutableCopy];
+    NSArray *mutableFetchResults = [[self.customManagedObjectContext executeFetchRequest:req error:&error] mutableCopy];
     
     return mutableFetchResults;
 }
@@ -122,13 +122,13 @@
 {
     NSArray *result = nil;
     
-    NSEntityDescription *entity = [NSEntityDescription entityForName:entityName inManagedObjectContext:self.managedObjectContext];
+    NSEntityDescription *entity = [NSEntityDescription entityForName:entityName inManagedObjectContext:self.customManagedObjectContext];
     NSFetchRequest *req = [[NSFetchRequest alloc] init];
     [req setEntity:entity];
     [req setPredicate:predicate];
     @try
     {
-        result = [self.managedObjectContext executeFetchRequest:req error:nil];
+        result = [self.customManagedObjectContext executeFetchRequest:req error:nil];
     }
     @catch(NSException *exception)
     {
@@ -142,7 +142,7 @@
 {
     NSArray *result = nil;
     
-    NSManagedObjectContext *context = self.managedObjectContext;
+    NSManagedObjectContext *context = self.customManagedObjectContext;
     NSEntityDescription *entity = [NSEntityDescription entityForName:entityName inManagedObjectContext:context];
     NSFetchRequest *req = [[NSFetchRequest alloc] init];
     [req setEntity:entity];
@@ -166,7 +166,7 @@
     
     NSArray *result = nil;
     
-    NSManagedObjectContext *context = self.managedObjectContext;
+    NSManagedObjectContext *context = self.customManagedObjectContext;
     NSEntityDescription *entity = [NSEntityDescription entityForName:entityName inManagedObjectContext:context];
     NSFetchRequest *req = [[NSFetchRequest alloc] init];
     [req setEntity:entity];
@@ -190,7 +190,7 @@
 - (void)saveContext
 {
     NSError *error = nil;
-    NSManagedObjectContext *managedObjectContext = self.managedObjectContext;
+    NSManagedObjectContext *managedObjectContext = self.customManagedObjectContext;
     if (managedObjectContext != nil)
     {
         if ([managedObjectContext hasChanges] && ![managedObjectContext save:&error])
@@ -212,7 +212,7 @@
             [self deleteObj2];
             for (NSManagedObject *obj in objects) {
                 //****NSLog(@"%@ %d", esName, objects.count);
-                [self.managedObjectContext deleteObject:obj];
+                [self.customManagedObjectContext deleteObject:obj];
             }
         }
         [self saveContext];
@@ -241,7 +241,7 @@
 
 -(void)deleteObj:(NSString *)esName
 {
-    NSManagedObjectContext *context = self.managedObjectContext; // your managed object context
+    NSManagedObjectContext *context = self.customManagedObjectContext; // your managed object context
     NSFetchRequest *request = [NSFetchRequest fetchRequestWithEntityName:esName];
     NSError *error;
     NSArray *objects = [context executeFetchRequest:request error:&error];
@@ -263,22 +263,7 @@
 {
     if (_customManagedObjectContext != nil) {
      return _customManagedObjectContext;
-     }
-     
-     if (_managedObjectContext != nil)
-     {
-     return _managedObjectContext;
-     }
-     
-     NSPersistentStoreCoordinator *coordinator = [self persistentStoreCoordinator];
-     
-     if (coordinator != nil)
-     {
-     _managedObjectContext = [[NSManagedObjectContext alloc] init];
-     [_managedObjectContext setPersistentStoreCoordinator:coordinator];
-     }
-    
-     return _managedObjectContext;
+    }
 }
 
 
@@ -340,13 +325,13 @@
 
 -(NSMutableArray*) fetchAllEventDataFromDB:(NSString *) entityName
 {
-    NSManagedObjectContext *context = self.managedObjectContext;
+    NSManagedObjectContext *context = self.customManagedObjectContext;
     NSEntityDescription *entity = [NSEntityDescription entityForName:entityName inManagedObjectContext:context];
     NSMutableArray *dataArray=[[NSMutableArray alloc]init];
     NSFetchRequest *req = [[NSFetchRequest alloc] init];
     [req setEntity:entity];
     NSError *error;
-    NSMutableArray *mutableFetchResults = [[self.managedObjectContext executeFetchRequest:req error:&error] mutableCopy];
+    NSMutableArray *mutableFetchResults = [[self.customManagedObjectContext executeFetchRequest:req error:&error] mutableCopy];
     if (!mutableFetchResults)
     {
         NSLog(@"%@",error);
@@ -373,7 +358,7 @@
 
 -(NSMutableArray*) fetchAllEventDataFromDB:(NSString *) entityName withPredicate:(NSPredicate *)predicate
 {
-    NSManagedObjectContext *context = self.managedObjectContext;
+    NSManagedObjectContext *context = self.customManagedObjectContext;
     NSEntityDescription *entity = [NSEntityDescription entityForName:entityName inManagedObjectContext:context];
     NSMutableArray *dataArray=[[NSMutableArray alloc]init];
     NSFetchRequest *req = [[NSFetchRequest alloc] init];
@@ -382,7 +367,7 @@
     if(predicate && (NSNull *)predicate != [NSNull null])
         [req setPredicate:predicate];
     NSError *error;
-    NSMutableArray *mutableFetchResults = [[self.managedObjectContext executeFetchRequest:req error:&error] mutableCopy];
+    NSMutableArray *mutableFetchResults = [[self.customManagedObjectContext executeFetchRequest:req error:&error] mutableCopy];
     if (!mutableFetchResults)
     {
         NSLog(@"%@",error);
@@ -420,7 +405,7 @@
 
 - (void) deleteEntity:(id) entity
 {
-    NSManagedObjectContext *context = self.managedObjectContext; // your managed object context
+    NSManagedObjectContext *context = self.customManagedObjectContext; // your managed object context
     [context deleteObject:entity];
 }
 

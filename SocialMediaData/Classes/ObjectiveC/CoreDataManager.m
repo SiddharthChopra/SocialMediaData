@@ -32,6 +32,14 @@
     return @"SocialMedia";
 }
 
+-(void)setDatabaseName:(NSString *)string{
+    self.dbName = string;
+}
+
+-(void)setCustomManagedObjectContext:(NSManagedObjectContext *)managedObjectContext {
+    self.customManagedObjectContext = managedObjectContext;
+}
+
 - (id) init
 {
     self = [super init];

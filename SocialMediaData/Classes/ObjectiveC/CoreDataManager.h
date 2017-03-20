@@ -50,6 +50,9 @@
 
 -(void)deleteObj:(NSString *)esName;
 
+-(void)setDatabaseName:(NSString *)string;
+
+-(void)setCustomManagedObjectContext:(NSManagedObjectContext *)managedObjectContext;
 
 -(NSMutableArray *) fetchAllEventDataFromDB:(NSString *) entityName;
 -(NSMutableArray*) fetchAllEventDataFromDB:(NSString *) entityName withPredicate:(NSPredicate *)predicate;

@@ -14,8 +14,8 @@
 #import <netinet/in.h>
 #import <SystemConfiguration/SystemConfiguration.h>
 
-@interface CheckConnectivity : NSObject
+@interface SocialCheckConnectivity : NSObject
 
 +(BOOL)hasConnectivity;
-+(CheckConnectivity*)sharedMySingleton;
++(SocialCheckConnectivity*)sharedMySingleton;
 @end

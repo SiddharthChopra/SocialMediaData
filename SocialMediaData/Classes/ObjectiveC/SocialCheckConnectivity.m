@@ -6,14 +6,14 @@
 //  Copyright (c) 2012 __MyCompanyName__. All rights reserved.
 //
 
-#import "CheckConnectivity.h"
+#import "SocialCheckConnectivity.h"
 
-@implementation CheckConnectivity
-static CheckConnectivity* _sharedMySingleton = nil;
+@implementation SocialCheckConnectivity
+static SocialCheckConnectivity* _sharedMySingleton = nil;
 
-+(CheckConnectivity*)sharedMySingleton
++(SocialCheckConnectivity*)sharedMySingleton
 {
-    @synchronized([CheckConnectivity class])
+    @synchronized([SocialCheckConnectivity class])
     {
         if (!_sharedMySingleton)
             _sharedMySingleton = [[self alloc] init];

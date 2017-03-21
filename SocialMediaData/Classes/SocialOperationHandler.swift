@@ -15,7 +15,7 @@ import SocialMediaData
 }
 
 
-public class SocialOperationHandler: NSObject, /*YouTubeFeedDelegate, FacebookFeedDelegate,*/ TwitterFeedDelegate {
+public class SocialOperationHandler: NSObject, YouTubeFeedDelegate, FacebookFeedDelegate, TwitterFeedDelegate {
 
     public var socialDelegate: SocialOperationHandlerDelegate?
 
@@ -28,6 +28,11 @@ public class SocialOperationHandler: NSObject, /*YouTubeFeedDelegate, FacebookFe
     var isYouTubeFirstTime = false
     var isLoadFromServer = false
 
+    var fbGraphURL = String()
+    var fbFromName = String()
+    var fbAppSecret = String()
+    var fbAppID = String()
+
     var twitterURL = String()
     var serverBaseURL = String()
     var tweetAccessToken = String()
@@ -37,14 +42,25 @@ public class SocialOperationHandler: NSObject, /*YouTubeFeedDelegate, FacebookFe
     var tweetOwnerSecretName = String()
     var tweetSlugName = String()
 
+    var youTubeAPIKey = String()
+    var youTubeUser = String()
+    var videosCountForSubscriptionChannel = String()
+    var isLoadFromSubscriptions: String!
+    var youTubeURL = String()
+    var countForSubscribedChannel = String()
+    var userChannelOnly = false
+    var userChannelId = String()
 
     public static let sharedInstance = SocialOperationHandler()
 
     override init() {
     }
 
-    public func initAllKeys(twitterURL: String, serverBaseURL: String, tweetAccessToken: String, tweetSecretKey: String, tweetConsumerKey: String, tweetConsumerSecret: String, tweetOwnerSecretName: String, tweetSlugName: String) {
+    public func initServerBaseURL(serverBaseURL: String) {
         self.serverBaseURL = serverBaseURL
+    }
+
+    public func initAllTwitterKeys(twitterURL: String, tweetAccessToken: String, tweetSecretKey: String, tweetConsumerKey: String, tweetConsumerSecret: String, tweetOwnerSecretName: String, tweetSlugName: String) {
         self.twitterURL = twitterURL
         self.tweetAccessToken = tweetAccessToken
         self.tweetSecretKey = tweetSecretKey
@@ -54,39 +70,47 @@ public class SocialOperationHandler: NSObject, /*YouTubeFeedDelegate, FacebookFe
         self.tweetSlugName = tweetSlugName
     }
 
+    public func initAllFacebookKeys(twitterURL: String, tweetAccessToken: String, tweetSecretKey: String, tweetConsumerKey: String, tweetConsumerSecret: String, tweetOwnerSecretName: String, tweetSlugName: String) {
+        self.twitterURL = twitterURL
+        self.tweetAccessToken = tweetAccessToken
+        self.tweetSecretKey = tweetSecretKey
+        self.tweetConsumerKey = tweetConsumerKey
+        self.tweetConsumerSecret = tweetConsumerSecret
+        self.tweetOwnerSecretName = tweetOwnerSecretName
+        self.tweetSlugName = tweetSlugName
+    }
 
     deinit {
         print("** SocialOperationHandler deinit called **")
     }
 
     func getFacebookFeeds() {
-        /*if self.checkCurrentProccessIsGoingOn() {
+        if self.checkCurrentProccessIsGoingOn() {
             return
         }
-        if CheckConnectivity.hasConnectivity() {
+        if SocialCheckConnectivity.hasConnectivity() {
             self.isFBLoadIsInProcess = true
-            let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
             let fbPublicHandler = FacebookPublicFeedsHandler.sharedInstance
             fbPublicHandler.fBFeedFetchDelegate = self
-            if appDelegate.configrationInfo.isLoadFromServer {
-                fbPublicHandler.getFacebookFeedListFromURL(Constants.ServiceEndPoints.getFacebookList)
+            if isLoadFromServer {
+                fbPublicHandler.getFacebookFeedListFromURL(stringURL: Constants.ServiceEndPoints.getFacebookList)
             } else {
-                if appDelegate.configrationInfo.fbURL.characters.count > 0 {
-                    fbPublicHandler.getPublicFeedsFromUserName(appDelegate.configrationInfo.fbURL)
+                if fbURL.characters.count > 0 {
+                    fbPublicHandler.getPublicFeedsFromUserName(fbUrl: fbURL)
                 } else {
-                    fbPublicHandler.getPublicFeedsFromUserName(SocialConstants.facebookGraphURL)
+                    fbPublicHandler.getPublicFeedsFromUserName(fbUrl: Constants.kFacebookGraphURL)
                 }
             }
         } else {
             self.noConnectivityReset()
-        }*/
+        }
     }
 
     public func getTwitterFeeds() {
         if self.checkCurrentProccessIsGoingOn() {
             return
         }
-        if CheckConnectivity.hasConnectivity() {
+        if SocialCheckConnectivity.hasConnectivity() {
             self.isTwitterLoadIsInProcess = true
             let twitterPublicHandler = TwitterPublicFeedsHandler.sharedInstance
             twitterPublicHandler.twitterDelegate = self
@@ -105,30 +129,29 @@ public class SocialOperationHandler: NSObject, /*YouTubeFeedDelegate, FacebookFe
     }
 
     func getYouTubeFeeds() {
-        /*if self.checkCurrentProccessIsGoingOn() {
+        if self.checkCurrentProccessIsGoingOn() {
             return
         }
-        if CheckConnectivity.hasConnectivity() {
+        if SocialCheckConnectivity.hasConnectivity() {
             self.isYoutubeLoadIsInProcess = true
-            let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
             let youTubePublicHandler = YouTubePublicFeedsHandler.sharedInstance
             youTubePublicHandler.youTubeDelegate = self
-            if appDelegate.configrationInfo.isLoadFromServer {
-                youTubePublicHandler.getYouTubeFeedListFromURL(Constants.ServiceEndPoints.getYoutubeList)
+            if isLoadFromServer {
+                youTubePublicHandler.getYouTubeFeedListFromURL(stringURL: Constants.ServiceEndPoints.getYoutubeList)
             } else {
                 var loadWithoutSubscriptions = false
-                if appDelegate.configrationInfo.isLoadFromSubscriptions == nil {
+                if isLoadFromSubscriptions == nil {
                     loadWithoutSubscriptions = true
-                } else if appDelegate.configrationInfo.isLoadFromSubscriptions.characters.count > 0 {
-                    if Int(appDelegate.configrationInfo.isLoadFromSubscriptions) == 1 {
+                } else if isLoadFromSubscriptions.characters.count > 0 {
+                    if Int(isLoadFromSubscriptions) == 1 {
                         loadWithoutSubscriptions = true
                     }
                 }
                 if loadWithoutSubscriptions {
-                    if appDelegate.configrationInfo.youTubeURL.characters.count > 0 {
-                        youTubePublicHandler.getYouTubeFeedsFromURL(appDelegate.configrationInfo.youTubeURL)
+                    if youTubeURL.characters.count > 0 {
+                        youTubePublicHandler.getYouTubeFeedsFromURL(stringURL: youTubeURL)
                     } else {
-                        youTubePublicHandler.getYouTubeFeedsFromURL(SocialConstants.kYoutubeUrl)
+                        youTubePublicHandler.getYouTubeFeedsFromURL(stringURL: Constants.kYoutubeUrl)
                     }
                 } else {
                     youTubePublicHandler.getUsersSubscriptionsData()
@@ -136,7 +159,7 @@ public class SocialOperationHandler: NSObject, /*YouTubeFeedDelegate, FacebookFe
             }
         } else {
             self.noConnectivityReset()
-        }*/
+        }
     }
 
     //MARK:- YouTubeFeedDelegate Methods
@@ -209,74 +232,6 @@ public class SocialOperationHandler: NSObject, /*YouTubeFeedDelegate, FacebookFe
         }
         return isProcessRunning
     }
-
-    public func fetchTwitterDataInfoFromDB() -> NSMutableArray {
-        let responseArray = NSMutableArray()
-        let coredataHandler = CoreDataManager.sharedInstance() as CoreDataManager
-        if let tempArray = coredataHandler.objects(Constants.coreDataTableKeys.kTwitterFeedInfor) as? NSArray {
-            for i in 0 ..< tempArray.count {
-                let coreDataObj = tempArray[i] as? TweetInfo
-                let dataObj = TwitterDataInfo()
-                dataObj.tweeterUserId = coreDataObj?.tweeterUserId
-                dataObj.tweetId = coreDataObj?.tweetId
-                dataObj.profileIcon = coreDataObj?.profileIcon
-                dataObj.tweetText = coreDataObj?.tweetText
-                dataObj.tweeterUserName = coreDataObj?.tweeterUserName
-                dataObj.tweetDate = coreDataObj?.tweetDate
-                responseArray.add(dataObj)
-            }
-        }
-        return responseArray
-    }
-
-    /*public func fetchYoutubeDataInfoFromDB() -> NSMutableArray {
-        let responseArray = NSMutableArray()
-        let coredataHandler = CoreDataManager.sharedInstance() as CoreDataManager
-        if let tempArray = coredataHandler.objects(Constants.coreDataTableKeys.kYoutubeInterface) as? NSArray {
-            for i in 0 ..< tempArray.count {
-                let coreDataObj = tempArray[i] as? YoutubeInterface
-                let dataObj = YouTubeInterfaceDataInfo()
-                dataObj.updatedDateTime = coreDataObj?.updatedDateTime
-                dataObj.youtubeAuthor = coreDataObj?.youtubeAuthor
-                dataObj.youtubeDescription = coreDataObj?.youtubeDescription
-                dataObj.youtubeImage = coreDataObj?.youtubeImage
-                dataObj.youtubeLink = coreDataObj?.youtubeLink
-                dataObj.youtubeTime = coreDataObj?.youtubeTime
-                dataObj.youtubeTitle = coreDataObj?.youtubeTitle
-                dataObj.youtubeViews = coreDataObj?.youtubeViews
-                responseArray.addObject(dataObj)
-            }
-        }
-        return responseArray
-    }
-
-    public func fetchFacebookDataInfoFromDB() -> NSMutableArray {
-        let responseArray = NSMutableArray()
-        let coredataHandler = CoreDataManager.sharedInstance() as CoreDataManager
-        if let tempArray = coredataHandler.objects(Constants.coreDataTableKeys.kFacebookFeedInfo) as? NSArray {
-            for i in 0 ..< tempArray.count {
-                let coreDataObj = tempArray[i] as? FacebookFeedInfo
-                let dataObj = FacebookFeedDataInfo()
-                dataObj.fbAuthorName = coreDataObj?.fbAuthorName
-                dataObj.fbCommentsCount = coreDataObj?.fbCommentsCount
-                dataObj.fbCreatedTime = coreDataObj?.fbCreatedTime
-                dataObj.fbDescription = coreDataObj?.fbDescription
-                dataObj.fbFeedId = coreDataObj?.fbFeedId
-                dataObj.fbLikesCount = coreDataObj?.fbLikesCount
-                dataObj.fbMessage = coreDataObj?.fbMessage
-                dataObj.fbPostPictureLink = coreDataObj?.fbPostPictureLink
-                dataObj.fbPostType = coreDataObj?.fbPostType
-                dataObj.fbSharesCount = coreDataObj?.fbSharesCount
-                dataObj.fbTitle = coreDataObj?.fbTitle
-                dataObj.fbUpdatedTime = coreDataObj?.fbUpdatedTime
-                dataObj.fbUserIcon = coreDataObj?.fbUserIcon
-                dataObj.fbUserId = coreDataObj?.fbUserId
-                dataObj.fbVideoLink = coreDataObj?.fbVideoLink
-                responseArray.addObject(dataObj)
-            }
-        }
-        return responseArray
-    }*/
 
     func noConnectivityReset() {
         self.isFBLoadIsInProcess = false

@@ -8,23 +8,31 @@
 
 /* Begin PBXBuildFile section */
 		12DC2CE2706781BAB3F20CAC3B991E44 /* FHSTwitterEngine.h in Headers */ = {isa = PBXBuildFile; fileRef = 8E27C6D56B59AAE4E7ABAA8DA767112C /* FHSTwitterEngine.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		14ADE197641C55D2F3088174DA1EBFAA /* CheckConnectivity.h in Headers */ = {isa = PBXBuildFile; fileRef = 2DB6C4BEE3804A6D7009D3C59AF12A0E /* CheckConnectivity.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		14ADE197641C55D2F3088174DA1EBFAA /* SocialCheckConnectivity.h in Headers */ = {isa = PBXBuildFile; fileRef = 2DB6C4BEE3804A6D7009D3C59AF12A0E /* SocialCheckConnectivity.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		158BCB6A0E851950C8001A4D45CBA220 /* FHSTwitterEngine.m in Sources */ = {isa = PBXBuildFile; fileRef = 26FE86A7272E905669431578EA5C812C /* FHSTwitterEngine.m */; };
 		183EB0545EB5417D63909A8A9D3DCAA8 /* Pods-SocialMediaData_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 12100070CFAB688FC614977F846920B5 /* Pods-SocialMediaData_Tests-dummy.m */; };
 		23624CEA89B9AEB4540940DE0900BFE3 /* TwitterDataInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1F6732426843770C5D61FAAE9F85098 /* TwitterDataInfo.swift */; };
-		280BDFB5936EE243C6093D89D31917CA /* TweetInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CC25966D9CE6A3A569FA7F0AB6B30A7 /* TweetInfo.swift */; };
 		2DDDB3575AA9772A353B638305CEFAA0 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C603738E3E447C64932C4645722D78C /* Constants.swift */; };
-		3BF62EA59F604B15C5FE5ADC6B5F93BE /* CheckConnectivity.m in Sources */ = {isa = PBXBuildFile; fileRef = 52F4DB747A17D95F84C17A70229034EB /* CheckConnectivity.m */; };
+		3BF62EA59F604B15C5FE5ADC6B5F93BE /* SocialCheckConnectivity.m in Sources */ = {isa = PBXBuildFile; fileRef = 52F4DB747A17D95F84C17A70229034EB /* SocialCheckConnectivity.m */; };
 		3FC283D828BC7EFB52BF7171A3A7358C /* TwitterPublicFeedsHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 291516C7E6EE4BE4833F800447C4D803 /* TwitterPublicFeedsHandler.swift */; };
 		461E294E5DB89C81F9BA20D491E893CD /* SocialMediaData-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 9F1AF475F26F98D8BFEAEEFC9C97009A /* SocialMediaData-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		57F085FB2ACD1E784CC466D6F83BAA8B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */; };
 		7F06A9FAFA349536347D383A55F6C76A /* FHSStream.h in Headers */ = {isa = PBXBuildFile; fileRef = DEC53D99E0522F77EA3EAF25A5658CBB /* FHSStream.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		B0A47333AD32764D4A545D96DF596AF1 /* CoreDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 023531F32F875A4263FEDBCB06E6ED79 /* CoreDataManager.m */; };
 		BA6EB34719E624DE29DA3BAAC623051F /* FHSStream.m in Sources */ = {isa = PBXBuildFile; fileRef = E5C5E19423C1E483D14B3D712C521F33 /* FHSStream.m */; };
 		C2B5353CF565A87AE9D29D2850AE059E /* Pods-SocialMediaData_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 175869C6DC4645CA9B9B6ABEB4CCBA08 /* Pods-SocialMediaData_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C53664D93D0384719A458FFC001694A7 /* TwitterJSONParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C2CCFFF002EBADB18B7DE6F5872DD16 /* TwitterJSONParser.swift */; };
-		CB97C20BA523754EFFA11756912AB0BB /* CoreDataManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 8A32140460EEC0728F224BFF06E3CEFB /* CoreDataManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		CC85E0631E7FBA1D00D55932 /* SocialMedia.xcdatamodeld in Resources */ = {isa = PBXBuildFile; fileRef = CC85E05F1E7FB9E900D55932 /* SocialMedia.xcdatamodeld */; };
+		CC85E0721E7FCDF800D55932 /* FacebookFeedDataInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC85E0691E7FCDF800D55932 /* FacebookFeedDataInfo.swift */; };
+		CC85E0731E7FCDF800D55932 /* FacebookFeedsJsonParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC85E06A1E7FCDF800D55932 /* FacebookFeedsJsonParser.swift */; };
+		CC85E0741E7FCDF800D55932 /* FacebookPublicFeedsHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC85E06B1E7FCDF800D55932 /* FacebookPublicFeedsHandler.swift */; };
+		CC85E0771E7FCDF800D55932 /* YouTubeInterfaceDataInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC85E06F1E7FCDF800D55932 /* YouTubeInterfaceDataInfo.swift */; };
+		CC85E0781E7FCDF800D55932 /* YouTubeJSONParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC85E0701E7FCDF800D55932 /* YouTubeJSONParser.swift */; };
+		CC85E0791E7FCDF800D55932 /* YouTubePublicFeedsHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC85E0711E7FCDF800D55932 /* YouTubePublicFeedsHandler.swift */; };
+		CC85E07A1E7FCE5800D55932 /* FacebookFeedDataInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC85E0691E7FCDF800D55932 /* FacebookFeedDataInfo.swift */; };
+		CC85E07B1E7FCE5800D55932 /* FacebookFeedsJsonParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC85E06A1E7FCDF800D55932 /* FacebookFeedsJsonParser.swift */; };
+		CC85E07C1E7FCE5800D55932 /* FacebookPublicFeedsHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC85E06B1E7FCDF800D55932 /* FacebookPublicFeedsHandler.swift */; };
+		CC85E07D1E7FCE5800D55932 /* YouTubeInterfaceDataInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC85E06F1E7FCDF800D55932 /* YouTubeInterfaceDataInfo.swift */; };
+		CC85E07E1E7FCE5800D55932 /* YouTubeJSONParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC85E0701E7FCDF800D55932 /* YouTubeJSONParser.swift */; };
+		CC85E07F1E7FCE5800D55932 /* YouTubePublicFeedsHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC85E0711E7FCDF800D55932 /* YouTubePublicFeedsHandler.swift */; };
 		D9116AE938C867FBF29321D9898C498C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */; };
 		D9B1D70E55F603DF48A3F05E55C78C94 /* SocialOperationHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82723EC73D985E084C903F7A42D6B57B /* SocialOperationHandler.swift */; };
 		E3952481A5E4D3784040E25607F0AF47 /* SocialMediaData-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E2FB228336B949D7B4A23D4434F841D /* SocialMediaData-dummy.m */; };
@@ -48,7 +56,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		023531F32F875A4263FEDBCB06E6ED79 /* CoreDataManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = CoreDataManager.m; sourceTree = "<group>"; };
 		074E8CAEFD68D0F35F1C005183260318 /* SocialMediaData.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = SocialMediaData.modulemap; sourceTree = "<group>"; };
 		0C603738E3E447C64932C4645722D78C /* Constants.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		0E2FB228336B949D7B4A23D4434F841D /* SocialMediaData-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SocialMediaData-dummy.m"; sourceTree = "<group>"; };
@@ -57,25 +64,28 @@
 		17D8F67813AD137A34C2AFFB34870133 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		26FE86A7272E905669431578EA5C812C /* FHSTwitterEngine.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = FHSTwitterEngine.m; sourceTree = "<group>"; };
 		291516C7E6EE4BE4833F800447C4D803 /* TwitterPublicFeedsHandler.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TwitterPublicFeedsHandler.swift; sourceTree = "<group>"; };
-		2DB6C4BEE3804A6D7009D3C59AF12A0E /* CheckConnectivity.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = CheckConnectivity.h; sourceTree = "<group>"; };
+		2DB6C4BEE3804A6D7009D3C59AF12A0E /* SocialCheckConnectivity.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = SocialCheckConnectivity.h; sourceTree = "<group>"; };
 		4C2CCFFF002EBADB18B7DE6F5872DD16 /* TwitterJSONParser.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TwitterJSONParser.swift; sourceTree = "<group>"; };
-		52F4DB747A17D95F84C17A70229034EB /* CheckConnectivity.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = CheckConnectivity.m; sourceTree = "<group>"; };
+		52F4DB747A17D95F84C17A70229034EB /* SocialCheckConnectivity.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = SocialCheckConnectivity.m; sourceTree = "<group>"; };
 		53FBC3D83F893B825199FC7CFDF9CD69 /* Pods_SocialMediaData_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SocialMediaData_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		77B7B5B05197A098A11A07870FFAF27F /* Pods-SocialMediaData_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-SocialMediaData_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		785DBD0251E735981AE5CF1DBFFD6727 /* SocialMediaData.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SocialMediaData.xcconfig; sourceTree = "<group>"; };
 		82723EC73D985E084C903F7A42D6B57B /* SocialOperationHandler.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SocialOperationHandler.swift; sourceTree = "<group>"; };
 		86C2E4CBD5DBF9834A425E3E6F6A9318 /* Pods-SocialMediaData_Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-SocialMediaData_Tests-frameworks.sh"; sourceTree = "<group>"; };
-		8A32140460EEC0728F224BFF06E3CEFB /* CoreDataManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = CoreDataManager.h; sourceTree = "<group>"; };
 		8D7B092449DF19ACFEAA4E87FA18AA50 /* SocialMediaData-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SocialMediaData-prefix.pch"; sourceTree = "<group>"; };
 		8E27C6D56B59AAE4E7ABAA8DA767112C /* FHSTwitterEngine.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = FHSTwitterEngine.h; sourceTree = "<group>"; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		9CC25966D9CE6A3A569FA7F0AB6B30A7 /* TweetInfo.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TweetInfo.swift; sourceTree = "<group>"; };
 		9EE758E3C909077F784A153B3B531D4C /* Pods-SocialMediaData_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-SocialMediaData_Tests.modulemap"; sourceTree = "<group>"; };
 		9F1AF475F26F98D8BFEAEEFC9C97009A /* SocialMediaData-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SocialMediaData-umbrella.h"; sourceTree = "<group>"; };
 		A00CDF92E9CAAE7CCB477E5D4D6FE015 /* Pods-SocialMediaData_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SocialMediaData_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		A1F6732426843770C5D61FAAE9F85098 /* TwitterDataInfo.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TwitterDataInfo.swift; sourceTree = "<group>"; };
 		CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		CC85E0601E7FB9E900D55932 /* SocialMedia.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = SocialMedia.xcdatamodel; sourceTree = "<group>"; };
+		CC85E0691E7FCDF800D55932 /* FacebookFeedDataInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FacebookFeedDataInfo.swift; sourceTree = "<group>"; };
+		CC85E06A1E7FCDF800D55932 /* FacebookFeedsJsonParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FacebookFeedsJsonParser.swift; sourceTree = "<group>"; };
+		CC85E06B1E7FCDF800D55932 /* FacebookPublicFeedsHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FacebookPublicFeedsHandler.swift; sourceTree = "<group>"; };
+		CC85E06F1E7FCDF800D55932 /* YouTubeInterfaceDataInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YouTubeInterfaceDataInfo.swift; sourceTree = "<group>"; };
+		CC85E0701E7FCDF800D55932 /* YouTubeJSONParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YouTubeJSONParser.swift; sourceTree = "<group>"; };
+		CC85E0711E7FCDF800D55932 /* YouTubePublicFeedsHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YouTubePublicFeedsHandler.swift; sourceTree = "<group>"; };
 		CD66B5D0713696D6222DFC20BF000CBC /* SocialMediaData.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SocialMediaData.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D6A8523A85F09A42DAFD96756D08204C /* Pods-SocialMediaData_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SocialMediaData_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
 		DEC53D99E0522F77EA3EAF25A5658CBB /* FHSStream.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = FHSStream.h; sourceTree = "<group>"; };
@@ -156,7 +166,8 @@
 		86B599D59947A794F178C6002E9BE6A3 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				CC85E05F1E7FB9E900D55932 /* SocialMedia.xcdatamodeld */,
+				CC85E0681E7FCDF800D55932 /* Facebook */,
+				CC85E06C1E7FCDF800D55932 /* Youtube */,
 				0C603738E3E447C64932C4645722D78C /* Constants.swift */,
 				82723EC73D985E084C903F7A42D6B57B /* SocialOperationHandler.swift */,
 				91CE99037F51AB263C483D449FDA11EE /* ObjectiveC */,
@@ -168,10 +179,8 @@
 		91CE99037F51AB263C483D449FDA11EE /* ObjectiveC */ = {
 			isa = PBXGroup;
 			children = (
-				2DB6C4BEE3804A6D7009D3C59AF12A0E /* CheckConnectivity.h */,
-				52F4DB747A17D95F84C17A70229034EB /* CheckConnectivity.m */,
-				8A32140460EEC0728F224BFF06E3CEFB /* CoreDataManager.h */,
-				023531F32F875A4263FEDBCB06E6ED79 /* CoreDataManager.m */,
+				2DB6C4BEE3804A6D7009D3C59AF12A0E /* SocialCheckConnectivity.h */,
+				52F4DB747A17D95F84C17A70229034EB /* SocialCheckConnectivity.m */,
 				0FE13832D61F937EDC3B64FC295267D3 /* FHSTwitterEngine */,
 			);
 			path = ObjectiveC;
@@ -180,7 +189,6 @@
 		B9670BAB2D7C0D9F293013B5264DC6B4 /* Twitter */ = {
 			isa = PBXGroup;
 			children = (
-				9CC25966D9CE6A3A569FA7F0AB6B30A7 /* TweetInfo.swift */,
 				A1F6732426843770C5D61FAAE9F85098 /* TwitterDataInfo.swift */,
 				4C2CCFFF002EBADB18B7DE6F5872DD16 /* TwitterJSONParser.swift */,
 				291516C7E6EE4BE4833F800447C4D803 /* TwitterPublicFeedsHandler.swift */,
@@ -194,6 +202,26 @@
 				7531C8F8DE19F1AA3C8A7AC97A91DC29 /* iOS */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CC85E0681E7FCDF800D55932 /* Facebook */ = {
+			isa = PBXGroup;
+			children = (
+				CC85E0691E7FCDF800D55932 /* FacebookFeedDataInfo.swift */,
+				CC85E06A1E7FCDF800D55932 /* FacebookFeedsJsonParser.swift */,
+				CC85E06B1E7FCDF800D55932 /* FacebookPublicFeedsHandler.swift */,
+			);
+			path = Facebook;
+			sourceTree = "<group>";
+		};
+		CC85E06C1E7FCDF800D55932 /* Youtube */ = {
+			isa = PBXGroup;
+			children = (
+				CC85E06F1E7FCDF800D55932 /* YouTubeInterfaceDataInfo.swift */,
+				CC85E0701E7FCDF800D55932 /* YouTubeJSONParser.swift */,
+				CC85E0711E7FCDF800D55932 /* YouTubePublicFeedsHandler.swift */,
+			);
+			path = Youtube;
 			sourceTree = "<group>";
 		};
 		DEFF227EB5B3ADB94E81961889618811 /* Targets Support Files */ = {
@@ -268,8 +296,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				14ADE197641C55D2F3088174DA1EBFAA /* CheckConnectivity.h in Headers */,
-				CB97C20BA523754EFFA11756912AB0BB /* CoreDataManager.h in Headers */,
+				14ADE197641C55D2F3088174DA1EBFAA /* SocialCheckConnectivity.h in Headers */,
 				7F06A9FAFA349536347D383A55F6C76A /* FHSStream.h in Headers */,
 				12DC2CE2706781BAB3F20CAC3B991E44 /* FHSTwitterEngine.h in Headers */,
 				461E294E5DB89C81F9BA20D491E893CD /* SocialMediaData-umbrella.h in Headers */,
@@ -348,7 +375,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CC85E0631E7FBA1D00D55932 /* SocialMedia.xcdatamodeld in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -359,14 +385,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3BF62EA59F604B15C5FE5ADC6B5F93BE /* CheckConnectivity.m in Sources */,
+				CC85E07A1E7FCE5800D55932 /* FacebookFeedDataInfo.swift in Sources */,
+				CC85E07B1E7FCE5800D55932 /* FacebookFeedsJsonParser.swift in Sources */,
+				CC85E07C1E7FCE5800D55932 /* FacebookPublicFeedsHandler.swift in Sources */,
+				CC85E07D1E7FCE5800D55932 /* YouTubeInterfaceDataInfo.swift in Sources */,
+				CC85E07E1E7FCE5800D55932 /* YouTubeJSONParser.swift in Sources */,
+				CC85E07F1E7FCE5800D55932 /* YouTubePublicFeedsHandler.swift in Sources */,
+				3BF62EA59F604B15C5FE5ADC6B5F93BE /* SocialCheckConnectivity.m in Sources */,
 				2DDDB3575AA9772A353B638305CEFAA0 /* Constants.swift in Sources */,
-				B0A47333AD32764D4A545D96DF596AF1 /* CoreDataManager.m in Sources */,
 				BA6EB34719E624DE29DA3BAAC623051F /* FHSStream.m in Sources */,
 				158BCB6A0E851950C8001A4D45CBA220 /* FHSTwitterEngine.m in Sources */,
 				E3952481A5E4D3784040E25607F0AF47 /* SocialMediaData-dummy.m in Sources */,
 				D9B1D70E55F603DF48A3F05E55C78C94 /* SocialOperationHandler.swift in Sources */,
-				280BDFB5936EE243C6093D89D31917CA /* TweetInfo.swift in Sources */,
 				23624CEA89B9AEB4540940DE0900BFE3 /* TwitterDataInfo.swift in Sources */,
 				C53664D93D0384719A458FFC001694A7 /* TwitterJSONParser.swift in Sources */,
 				3FC283D828BC7EFB52BF7171A3A7358C /* TwitterPublicFeedsHandler.swift in Sources */,
@@ -378,6 +408,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				183EB0545EB5417D63909A8A9D3DCAA8 /* Pods-SocialMediaData_Tests-dummy.m in Sources */,
+				CC85E0791E7FCDF800D55932 /* YouTubePublicFeedsHandler.swift in Sources */,
+				CC85E0721E7FCDF800D55932 /* FacebookFeedDataInfo.swift in Sources */,
+				CC85E0771E7FCDF800D55932 /* YouTubeInterfaceDataInfo.swift in Sources */,
+				CC85E0741E7FCDF800D55932 /* FacebookPublicFeedsHandler.swift in Sources */,
+				CC85E0781E7FCDF800D55932 /* YouTubeJSONParser.swift in Sources */,
+				CC85E0731E7FCDF800D55932 /* FacebookFeedsJsonParser.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -502,6 +538,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
 				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_VERSION = 3.0;
 				SYMROOT = "${SRCROOT}/../build";
 				VALIDATE_PRODUCT = YES;
 			};
@@ -547,6 +584,7 @@
 				ONLY_ACTIVE_ARCH = YES;
 				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
 				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_VERSION = 3.0;
 				SYMROOT = "${SRCROOT}/../build";
 			};
 			name = Debug;
@@ -649,19 +687,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCVersionGroup section */
-		CC85E05F1E7FB9E900D55932 /* SocialMedia.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				CC85E0601E7FB9E900D55932 /* SocialMedia.xcdatamodel */,
-			);
-			currentVersion = CC85E0601E7FB9E900D55932 /* SocialMedia.xcdatamodel */;
-			path = SocialMedia.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
 	rootObject = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 }

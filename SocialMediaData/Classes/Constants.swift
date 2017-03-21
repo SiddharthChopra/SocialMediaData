@@ -15,6 +15,8 @@ struct Constants {
 
     static let AllowSRSubmitDetailsView: Bool = false
     static let kTweetUrl = "https://api.twitter.com/1.1/lists/statuses.json";
+    static let kYoutubeUrl = "http://gdata.youtube.com/feeds/base/users/antoniovillaraigosa/uploads?orderby=updated&max-results=15"
+    static let kFacebookURL = "https://graph.facebook.com/oauth/access_token?client_id=%@&client_secret=%@&grant_type=client_credentials"
 
     enum ServiceEndPoints {
 

@@ -48,16 +48,8 @@ class TwitterJSONParser: NSObject {
     }
 
     func parseTwitterInfo(_ dataArray: NSArray, tweetsArray: NSMutableArray) -> NSMutableArray {
-        let coreDataManager = CoreDataManager.sharedInstance() as CoreDataManager
-        let alreadySavedData = coreDataManager.objects(Constants.coreDataTableKeys.kTwitterFeedInfor) as NSArray
-        var j = 0
-        for (i, dic) in dataArray.enumerated() {
-            var coreDataObj: TweetInfo? = nil
-            if i < alreadySavedData.count {
-                coreDataObj = alreadySavedData[i] as? TweetInfo
-            } else if let tempInfo = coreDataManager.createEntinty(Constants.coreDataTableKeys.kTwitterFeedInfor) as? TweetInfo {
-                coreDataObj = tempInfo
-            }
+        for dic in dataArray {
+            let coreDataObj: TwitterDataInfo? = TwitterDataInfo()
             let dict = dic as! NSDictionary
             if let tweetID = dict["id_str"], tweetID as? String != nil {
                 coreDataObj?.tweetId = tweetID as? String
@@ -88,26 +80,6 @@ class TwitterJSONParser: NSObject {
                 }
             }
             tweetsArray.add(coreDataObj!)
-            j += 1
-        }
-        var isDeleteChanges = false
-        if j < alreadySavedData.count {
-            for i in j ..< alreadySavedData.count {
-                var coreDataObj: TweetInfo? = nil
-                if i < alreadySavedData.count {
-                    coreDataObj = alreadySavedData[i] as? TweetInfo
-                }
-                if coreDataObj != nil {
-                    isDeleteChanges = true
-                    coreDataManager.customManagedObjectContext!.delete(coreDataObj!)
-                }
-            }
-        }
-        if tweetsArray.count > 0 {
-            coreDataManager.saveContext()
-        }
-        if isDeleteChanges {
-            coreDataManager.saveContext()
         }
         return tweetsArray
     }
